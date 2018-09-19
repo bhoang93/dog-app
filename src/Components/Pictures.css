@@ -1,0 +1,30 @@
+.dogPicture {
+  height: 300px;
+  width: auto;
+  padding: 10px;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.dogPicture:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.dogContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .dogPicture {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .dogPicture {
+    height: 80px;
+    padding: 2px;
+  }
+}

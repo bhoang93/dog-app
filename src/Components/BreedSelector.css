@@ -1,0 +1,34 @@
+.breedContainer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5px
+}
+
+.breedButton {
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: #92baac;
+  font-size: 1vw;
+  width: 160px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.breedButton:active {
+  transform: scale(0.95);
+}
+
+@media only screen and (max-width: 800px) {
+  .breedButton {
+    padding: 3px 8px 3px 8px;
+    font-size: 1.8vw;
+    width: 80px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .breedButton {
+    padding: 1px 4px 1px 4px;
+  }
+}
