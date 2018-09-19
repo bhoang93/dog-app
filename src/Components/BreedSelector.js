@@ -4,39 +4,39 @@ import "./BreedSelector.css";
 const dogBreeds = [
   {
     name: "All Doggos",
-    url: "https://dog.ceo/api/breeds/image/random/20"
+    url: "https://dog.ceo/api/breeds/image/random/30"
   },
   {
     name: "French Bulldog",
-    url: "https://dog.ceo/api/breed/bulldog/french/images/random/20"
+    url: "https://dog.ceo/api/breed/bulldog/french/images/random/30"
   },
   {
     name: "Pomeranian",
-    url: "https://dog.ceo/api/breed/pomeranian/images/random/20"
+    url: "https://dog.ceo/api/breed/pomeranian/images/random/30"
   },
   {
     name: "Pug",
-    url: "https://dog.ceo/api/breed/pug/images/random/20"
+    url: "https://dog.ceo/api/breed/pug/images/random/30"
   },
   {
     name: "Shiba Inu",
-    url: "https://dog.ceo/api/breed/shiba/images/random/20"
+    url: "https://dog.ceo/api/breed/shiba/images/random/30"
   },
   {
     name: "Corgi",
-    url: "https://dog.ceo/api/breed/corgi/images/random/20"
+    url: "https://dog.ceo/api/breed/corgi/images/random/30"
   },
   {
     name: "Sheepdog",
-    url: "https://dog.ceo/api/breed/sheepdog/images/random/20"
+    url: "https://dog.ceo/api/breed/sheepdog/images/random/30"
   },
   {
     name: "Husky",
-    url: "https://dog.ceo/api/breed/husky/images/random/20"
+    url: "https://dog.ceo/api/breed/husky/images/random/30"
   },
   {
     name: "Chow Chow",
-    url: "https://dog.ceo/api/breed/chow/images/random/20"
+    url: "https://dog.ceo/api/breed/chow/images/random/30"
   }
 ];
 

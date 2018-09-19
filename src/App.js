@@ -1,16 +1,21 @@
 import React, { Component } from "react";
-import logo from "./dogLogo.svg.png";
 import "./App.css";
+
+import UpArrow from "./up_arrow.png";
 
 import BreedSelector from "./Components/BreedSelector";
 import Pictures from "./Components/Pictures";
+import Modal from "./Components/Modal";
+import ModalImage from "./Components/ModalImage";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      breed: "https://dog.ceo/api/breeds/image/random/20",
-      dogPictures: []
+      breed: "https://dog.ceo/api/breeds/image/random/30",
+      dogPictures: [],
+      modalOpen: false,
+      modalImage: ""
     };
   }
 
@@ -26,6 +31,7 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchDogs();
+    console.log(window.screenY);
   }
 
   setDogBreed = breed => {
@@ -39,15 +45,48 @@ class App extends Component {
     );
   };
 
+  openModal = image => {
+    this.setState(
+      prevState => {
+        return {
+          modalOpen: !prevState.modalOpen,
+          modalImage: image
+        };
+      },
+      () => console.log(this.state.modalUrl)
+    );
+  };
+
+  scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   render() {
     return (
       <div className="App">
+        <img
+          src={UpArrow}
+          className="scrollToTop"
+          onClick={this.scrollToTop}
+          alt="Scroll to top."
+        />
+        {this.state.modalOpen && (
+          <Modal>
+            <ModalImage
+              openModal={this.openModal}
+              modalImage={this.state.modalImage}
+            />
+          </Modal>
+        )}
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <span className="App-logo">🐶</span>
           <h1 className="App-title">Pictures of Dogs</h1>
         </header>
         <BreedSelector setDogBreed={this.setDogBreed} />
-        <Pictures dogPictures={this.state.dogPictures} />
+        <Pictures
+          openModal={this.openModal}
+          dogPictures={this.state.dogPictures}
+        />
       </div>
     );
   }

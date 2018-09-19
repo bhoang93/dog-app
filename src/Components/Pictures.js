@@ -1,7 +1,7 @@
 import React from "react";
 import "./Pictures.css";
 
-const Pictures = ({ dogPictures }) => {
+const Pictures = ({ openModal, dogPictures }) => {
   return (
     <div className="dogContainer">
       {dogPictures.map(dog => {
@@ -10,6 +10,7 @@ const Pictures = ({ dogPictures }) => {
             className="dogPicture"
             alt="Picture of a dog"
             key={dogPictures.indexOf(dog)}
+            onClick={() => openModal(dog)}
             src={dog}
           />
         );

@@ -1,12 +1,18 @@
 .breedContainer {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 998;
+  background-color: white;
   display: flex;
   justify-content: space-evenly;
-  padding-top: 5px
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .breedButton {
-  font-weight: bold;
   border-radius: 20px;
+  padding: 5px 10px 5px 10px;
   background-color: #92baac;
   font-size: 1vw;
   width: 160px;
@@ -14,6 +20,10 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
+}
+
+.breedButton:hover {
+  background-color: #679686;
 }
 
 .breedButton:active {
