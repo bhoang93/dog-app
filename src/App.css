@@ -43,4 +43,10 @@
   .App-logo {
     font-size: 5vw;
   }
+
+  .scrollToTop {
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+  }
 }

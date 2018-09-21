@@ -9,7 +9,7 @@ const Pictures = ({ openModal, dogPictures }) => {
           <img
             className="dogPicture"
             alt="Picture of a dog"
-            key={dogPictures.indexOf(dog)}
+            key={Math.random()}
             onClick={() => openModal(dog)}
             src={dog}
           />

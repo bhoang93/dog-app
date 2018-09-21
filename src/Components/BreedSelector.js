@@ -1,9 +1,10 @@
 import React from "react";
 import "./BreedSelector.css";
+import Autocomplete from "react-autocomplete";
 
 const dogBreeds = [
   {
-    name: "All Doggos",
+    name: "All Breeds",
     url: "https://dog.ceo/api/breeds/image/random/30"
   },
   {
@@ -13,6 +14,10 @@ const dogBreeds = [
   {
     name: "Pomeranian",
     url: "https://dog.ceo/api/breed/pomeranian/images/random/30"
+  },
+  {
+    name: "Samoyed",
+    url: "https://dog.ceo/api/breed/samoyed/images/random/30"
   },
   {
     name: "Pug",

@@ -1,12 +1,15 @@
 {
   "name": "dog-app",
   "homepage": "http://bhoang93.github.io/dog-app",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.0",
     "react": "^16.5.2",
+    "react-autocomplete": "^1.8.1",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.5.2",
+    "react-infinite-scroll-component": "^4.2.0",
     "react-scripts": "1.1.5"
   },
   "scripts": {
