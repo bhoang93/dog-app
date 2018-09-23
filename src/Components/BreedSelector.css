@@ -7,38 +7,50 @@
   padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
-  justify-content: space-evenly;
 }
 
-.breedButton {
-  border-radius: 20px;
+.breedButtonDiv {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+button {
   padding: 5px 10px 5px 10px;
-  background-color: #92baac;
   font-size: 1vw;
   width: 160px;
   color: white;
   border: none;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
+  flex: 0 0 auto;
+  margin-right: 5px;
+}
+
+.breedButton {
+  border-radius: 20px;
+  background-color: dodgerblue;
 }
 
 .breedButton:hover {
-  background-color: #679686;
+  background-color: royalblue;
 }
 
 .breedButton:active {
   transform: scale(0.95);
 }
 
-@media only screen and (max-width: 800px) {
-  .breedButton {
+@media only screen and (max-width: 1000px) {
+  button {
     padding: 3px 8px 3px 8px;
-    font-size: 1.8vw;
+    font-size: 3vw;
     width: 80px;
   }
 }
+
 @media only screen and (max-width: 800px) {
-  .breedButton {
+  button {
     padding: 1px 4px 1px 4px;
   }
 }

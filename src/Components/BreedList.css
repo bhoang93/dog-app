@@ -1,0 +1,49 @@
+.breedListContainer {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: rgba(200,200,200,0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.breedList {
+  list-style: none;
+}
+
+.breedLi {
+  font-size: 3vw;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.breedLi:hover {
+  color: dodgerblue;
+}
+
+.listButton {
+  background-color: mediumblue;
+  margin-left: 3px;
+}
+
+.listButton:hover {
+  background-color: midnightBlue;
+}
+
+.closeButton {
+  background-color: deepskyblue;
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1025px) {
+.listButton {
+    padding: 5px 4px 5px 4px;
+  }
+
+  .breedLi {
+    font-size: 5vw;
+    padding-bottom: 15px;
+  }
+}

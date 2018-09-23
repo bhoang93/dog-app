@@ -61,19 +61,16 @@ class App extends Component {
   };
 
   openModal = image => {
-    this.setState(
-      prevState => {
-        return {
-          modalOpen: !prevState.modalOpen,
-          modalImage: image
-        };
-      },
-      () => console.log(this.state.modalUrl)
-    );
+    this.setState(prevState => {
+      return {
+        modalOpen: !prevState.modalOpen,
+        modalImage: image
+      };
+    });
   };
 
   scrollToTop = () => {
-    window.scrollTo(0, 0);
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
   };
 
   render() {

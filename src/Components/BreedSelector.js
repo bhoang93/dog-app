@@ -1,6 +1,9 @@
 import React from "react";
 import "./BreedSelector.css";
+import BreedList from "./BreedList";
+
 import Autocomplete from "react-autocomplete";
+import { Scrollbars } from "react-custom-scrollbars";
 
 const dogBreeds = [
   {
@@ -42,23 +45,62 @@ const dogBreeds = [
   {
     name: "Chow Chow",
     url: "https://dog.ceo/api/breed/chow/images/random/30"
+  },
+  {
+    name: "Boxer",
+    url: "https://dog.ceo/api/breed/boxer/images/random/30"
+  },
+  {
+    name: "Malamute",
+    url: "https://dog.ceo/api/breed/malamute/images/random/30"
+  },
+  {
+    name: "Akita",
+    url: "https://dog.ceo/api/breed/akita/images/random/30"
+  },
+  {
+    name: "Whippet",
+    url: "https://dog.ceo/api/breed/whippet/images/random/30"
+  },
+  {
+    name: "Dalmatian",
+    url: "https://dog.ceo/api/breed/dalmatian/images/random/30"
+  },
+  {
+    name: "Chihuahua",
+    url: "https://dog.ceo/api/breed/chihuahua/images/random/30"
+  },
+  {
+    name: "Beagle",
+    url: "https://dog.ceo/api/breed/beagle/images/random/30"
+  },
+  {
+    name: "Basenji",
+    url: "https://dog.ceo/api/breed/basenji/images/random/30"
+  },
+  {
+    name: "Otterhound",
+    url: "https://dog.ceo/api/breed/otterhound/images/random/30"
   }
 ];
 
 const BreedSelector = ({ setDogBreed }) => {
   return (
     <div className="breedContainer">
-      {dogBreeds.map(breed => {
-        return (
-          <button
-            className="breedButton"
-            key={dogBreeds.indexOf(breed)}
-            onClick={() => setDogBreed(breed.url)}
-          >
-            {breed.name}
-          </button>
-        );
-      })}
+      <BreedList setDogBreed={setDogBreed} dogBreeds={dogBreeds} />
+      <div className="breedButtonDiv">
+        {dogBreeds.map(breed => {
+          return (
+            <button
+              className="breedButton"
+              key={dogBreeds.indexOf(breed)}
+              onClick={() => setDogBreed(breed.url)}
+            >
+              {breed.name}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };

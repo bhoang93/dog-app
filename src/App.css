@@ -6,25 +6,31 @@
 
 .App-logo {
   font-size: 3vw;
+  padding-bottom: 5px;
+  animation: rotate 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+	0%, 100% { transform: rotate(20deg); }
+	25% { transform: scale(1.1); }
+	50% { transform: rotate(-20deg); }
+	75% { transform: scale(.9); }
 }
 
 .App-header {
   background:
-  linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
-  linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
-  linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
-  background-color:#e1ebbd;
-  background-size: 128px 128px;
-  padding-top: 0px;
-  padding-bottom: 1px;
-  font-size: 1vw;
+  radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent),
+  radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent) 0 -50px;
+  background-color: dodgerblue;
+  background-size:75px 100px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2vw;
+  color: white;
 }
 
 .scrollToTop {
